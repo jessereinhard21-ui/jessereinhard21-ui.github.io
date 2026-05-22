@@ -60,12 +60,6 @@ document.querySelectorAll("button.work-tab").forEach(tab => {
 const collections = {
   characters: [
     "./assets/exploration/characters/MariaMech.png",
-    "./assets/exploration/characters/MariaMech1.png",
-    "./assets/exploration/characters/MariaMech2.png",
-    "./assets/exploration/characters/MariaMech3.png",
-    "./assets/exploration/characters/MariaMech4.png",
-    "./assets/exploration/characters/Jolene.png",
-    "./assets/exploration/characters/JoleneBright.png",
     "./assets/exploration/characters/JoleneCut.png",
     "./assets/exploration/characters/DetonateLogos-05.png",
     "./assets/exploration/characters/studio_001.jpg",
@@ -77,7 +71,6 @@ const collections = {
     "./assets/exploration/environments/InTheTrees.png",
     "./assets/exploration/environments/Fog.png",
     "./assets/exploration/environments/DancingCircles.png",
-    "./assets/exploration/environments/AP-art-3.png",
     "./assets/exploration/environments/double-double-1.2_0058_00000.png",
     "./assets/exploration/environments/floater0041.png",
     "./assets/exploration/environments/floater.mp4",
@@ -88,7 +81,6 @@ const collections = {
   art: [
     "./assets/exploration/art/studio_010.jpg",
     "./assets/exploration/art/studio_032.jpg",
-    "./assets/exploration/art/studio_038.jpg",
     "./assets/exploration/art/studio_044.jpg",
     "./assets/exploration/art/studio_047.jpg",
     "./assets/exploration/art/studio_048.jpg",
@@ -97,7 +89,6 @@ const collections = {
     "./assets/exploration/art/studio_053.jpg",
     "./assets/exploration/art/studio_056.jpg",
     "./assets/exploration/art/studio_059.jpg",
-    "./assets/exploration/art/studio_060.jpg",
     "./assets/exploration/art/studio_061.jpg",
     "./assets/exploration/art/studio_062.jpg",
     "./assets/exploration/art/studio_063.jpg",
