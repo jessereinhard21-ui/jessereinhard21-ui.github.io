@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jesse Reinhard</title>
+  <title>Jesse Reinhard — Live Show Director &amp; Producer</title>
+  <meta name="description" content="Live show director and producer — drone shows, stadium spectacles, and brand experiences. Macy's 4th of July, Brisbane NYE, City of Baltimore, Baltimore Ravens, Wacken Open Air.">
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -16,8 +17,10 @@
   <header>
     <nav>
       <div class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#work" class="nav-link">Work</a>
+        <a href="Shows.html" class="nav-link">Shows</a>
+        <a href="#work" class="nav-link">Brand &amp; Concept</a>
+        <a href="Storyboards.html" class="nav-link">Storyboards</a>
+        <a href="RND.html" class="nav-link">R&amp;D</a>
         <a href="#about" class="nav-link">About</a>
       </div>
       <div class="hamburger"><span></span><span></span><span></span></div>
@@ -28,12 +31,13 @@
   <section class="hero" id="home">
     <div class="hero-inner">
       <h1>Jesse<br>Reinhard</h1>
-      <p>Artist and Programmer</p>
+      <p>Live show director &amp; producer</p>
+      <p class="hero-sub">Drone shows, stadium spectacles, brand experiences.</p>
     </div>
     <div class="hero-img">
-      <video autoplay loop muted playsinline poster="./assets/exploration/environments/DancingCircles.png">
-        <source src="./assets/hero/flamingoboat.webm" type="video/webm">
-        <img src="./assets/exploration/environments/DancingCircles.png" alt="Jesse Reinhard">
+      <video autoplay loop muted playsinline poster="./assets/drones/WackenAir/Screenshot 2024-08-01 231738.png">
+        <source src="./assets/drones/WackenAir/wacken_loop.mp4" type="video/mp4">
+        <img src="./assets/drones/WackenAir/Screenshot 2024-08-01 231738.png" alt="Drone show in flight">
       </video>
     </div>
   </section>
@@ -41,126 +45,74 @@
   <!-- WORK -->
   <section class="work" id="work">
 
-    <nav class="work-nav">
-      <button class="work-tab active" data-target="motion">Projects</button>
-      <a href="Verge.html" class="work-tab">Drones</a>
-      <button class="work-tab" data-target="art">Art</button>
-    </nav>
+    <!-- SHOWS -->
+    <div class="work-section">
+      <div class="work-head">
+        <h2 class="work-heading">Shows</h2>
+        <a href="Shows.html" class="work-head-link">All shows <i class="uil uil-arrow-right"></i></a>
+      </div>
+      <p class="work-desc">
+        Creative Director at Verge Aero since 2024 — drone shows and live spectacles
+        taken from the first client conversation through design, permitting, and live flight.
+      </p>
 
-    <!-- MOTION -->
-    <div class="work-group active" data-group="motion">
-      <p class="work-desc">Commercial and concept work — motion design, 3D, and animation made for brands, DJs, and visual storytelling.</p>
+      <a href="Shows.html" class="shows-feature">
+        <img src="./assets/drones/Brisbane/Screenshot 2025-11-05 103118.png" alt="Brisbane New Year's Eve drone show" loading="lazy">
+        <div class="shows-feature-body">
+          <div class="shows-feature-clients">
+            <span>Brisbane NYE</span>
+            <span>Baltimore Fourth of July</span>
+            <span>Wacken Open Air</span>
+            <span>Macy's 4th of July</span>
+            <span>PGI</span>
+            <span>Baltimore Ravens</span>
+            <span>Cornell</span>
+            <span>UT Austin</span>
+            <span>+ 50 more</span>
+          </div>
+          <span class="shows-feature-cta">See the case studies <i class="uil uil-arrow-right"></i></span>
+        </div>
+      </a>
+    </div>
+
+    <!-- BRAND & CONCEPT -->
+    <div class="work-section">
+      <div class="work-head">
+        <h2 class="work-heading">Brand &amp; Concept</h2>
+      </div>
+      <p class="work-desc">
+        Campaign ideas built for brands — the insight first, the execution second.
+      </p>
       <div class="work-grid">
-
-        <a href="OSLSHADERS.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/osl-shaders/NeonSignGlowFinal.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>OSL Shaders — 3D & Shaders</span></div>
-        </a>
-
-        <a href="SCOTTY.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/scotty/NEONSCOTT.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Scotty — DJ Visuals</span></div>
-        </a>
-
-        <a href="VANTA.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/vanta/VANTAo.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Vanta — 3D Motion</span></div>
-        </a>
 
         <a href="UNDERARMOUR.html" class="work-item">
           <video loop muted playsinline preload="none"><source data-src="./assets/projects/underarmour/UNDERARMOUR_v1.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Under Armour — Concept AD</span></div>
+          <div class="work-label"><span>Under Armour — "Protect This House"</span></div>
         </a>
 
         <a href="NikeFactory.html" class="work-item">
           <video loop muted playsinline preload="none"><source data-src="./assets/projects/nike/Just Do it_25sec.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Nike Factory — Animation</span></div>
+          <div class="work-label"><span>Nike — "Just Do It" as a production line</span></div>
         </a>
-
-        <!-- Hidden: Allstar (moved to Art section)
-        <a href="ALLSTAR.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/allstar/ALL_v8.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Allstar — Motion</span></div>
-        </a>
-        -->
-
-        <!-- Hidden: Just Breathe (moved to Art section)
-        <a href="JUSTBREATHE.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/justbreathe/Just_Breathe_Smooth.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Just Breathe — Motion</span></div>
-        </a>
-        -->
-
-        <!-- Hidden: Fleshwater
-        <a href="FLESHWATER.html" class="work-item">
-          <img loading="lazy" src="https://img.youtube.com/vi/rglZYBYqYiE/maxresdefault.jpg" alt="Fleshwater — 3D & Concept">
-          <div class="work-label"><span>Fleshwater — 3D & Concept</span></div>
-        </a>
-        -->
-
-        <a href="STREAMDIFFUSION.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/streamdiffusion/MagicJump.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>TouchDesigner × StreamDiffusion</span></div>
-        </a>
-
-        <a href="COMFYUI.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/comfyui/EYECANDY.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>ComfyUI — Fashion LoRA</span></div>
-        </a>
-
-        <a href="RUNWAYCONCEPT.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/runwayconcept/Runway2000.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Runway Concept — AI Fashion Film</span></div>
-        </a>
-
-        <!-- Hidden: Detonate
-        <a href="DETONATE.html" class="work-item fit-contain">
-          <img loading="lazy" src="./assets/projects/detonate/DetonateLogos-05.png" alt="Detonate — Branding & Motion">
-          <div class="work-label"><span>Detonate — Branding & Motion</span></div>
-        </a>
-        -->
 
       </div>
     </div>
 
-    <!-- ART -->
-    <div class="work-group" data-group="art">
-      <p class="work-desc">Personal experiments — stills, illustrations, and concept art. Click any collection to open a lightbox you can flip through.</p>
+    <!-- R&D -->
+    <div class="work-section">
+      <div class="work-head">
+        <h2 class="work-heading">R&amp;D</h2>
+        <a href="RND.html" class="work-head-link">The builds <i class="uil uil-arrow-right"></i></a>
+      </div>
+      <p class="work-desc">
+        Pipelines and tooling built to make production faster — real-time AI visuals, procedural
+        shaders, and generative concepting.
+      </p>
       <div class="work-grid">
 
-        <div class="work-item art-item" data-collection="art">
-          <img loading="lazy" src="./assets/exploration/art/studio_010.jpg" alt="Art collection">
-          <div class="work-label"><span>Art — 16 works</span></div>
-        </div>
-
-        <div class="work-item art-item" data-collection="fashion">
-          <img loading="lazy" src="./assets/exploration/Fashion/studio_036.jpg" alt="Fashion collection">
-          <div class="work-label"><span>Fashion — 10 works</span></div>
-        </div>
-
-        <div class="work-item art-item" data-collection="characters">
-          <img loading="lazy" src="./assets/exploration/characters/MariaMech.png" alt="Characters collection">
-          <div class="work-label"><span>Characters — 7 works</span></div>
-        </div>
-
-        <div class="work-item art-item" data-collection="environments">
-          <img loading="lazy" src="./assets/exploration/environments/InTheTrees.png" alt="Environments collection">
-          <div class="work-label"><span>Environments — 9 works</span></div>
-        </div>
-
-        <div class="work-item art-item" data-collection="photography">
-          <img loading="lazy" src="./assets/exploration/photography/20180124_135438.jpg" alt="Photography collection">
-          <div class="work-label"><span>Photography — 3 works</span></div>
-        </div>
-
-        <a href="ALLSTAR.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/allstar/ALL_v8.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Allstar — Motion</span></div>
-        </a>
-
-        <a href="JUSTBREATHE.html" class="work-item">
-          <video loop muted playsinline preload="none"><source data-src="./assets/projects/justbreathe/Just_Breathe_Smooth.mp4" type="video/mp4"></video>
-          <div class="work-label"><span>Just Breathe — Motion</span></div>
+        <a href="RND.html" class="work-item wide">
+          <video loop muted playsinline preload="none"><source data-src="./assets/projects/osl-shaders/NeonSignGlowFinal.mp4" type="video/mp4"></video>
+          <div class="work-label"><span>TouchDesigner × StreamDiffusion · ComfyUI LoRA · OSL Shaders · Generative Video</span></div>
         </a>
 
       </div>
@@ -174,37 +126,37 @@
       <h2>About</h2>
       <div class="about-body">
         <p class="about-lead">
-          Born in LA, shaped by Chicago, finishing up school in Austin.
-          Motion designer and 3D artist — self-taught through YouTube and a love for anything visual.
+          I direct and produce live spectacles — drone shows, stadium moments, and brand
+          experiences — from the first client conversation through design, permitting, and live
+          flight.
         </p>
         <p>
-          My work spans motion graphics, 3D visualization, and concept design — built in
-          Cinema 4D, After Effects, and Blender. I've created visuals for DJ sets and
-          conceptualized campaigns for brands like Under Armour and Nike.
+          At Verge Aero I've show-directed for Macy's 4th of July in NYC, Brisbane's official New
+          Year's Eve countdown, the City of Baltimore and the Baltimore Ravens, and Wacken Open Air in Germany, sitting
+          between the client and the production team and turning briefs into shows that actually fly
+          on a broadcast clock.
         </p>
         <p>
-          At Verge Aero I work as a creative manager and show director — taking drone
-          shows from the first client conversation through design, choreography, and live
-          flight. I sit between the client and the production team, translating creative
-          briefs into shows that actually fly.
+          Beyond the headline shows, I've designed for the NFL, minor-league baseball and college
+          athletics, city anniversaries and Fourth of July celebrations, and music festivals across the
+          US and Europe &mdash; dozens of shows a season.
         </p>
         <p>
-          I'm also deep in the AI toolchain — training ComfyUI fashion LoRAs and
-          generating brand imagery, pairing TouchDesigner with StreamDiffusion for
-          real-time visuals, and writing software that streamlines creative pipelines.
+          I concept brand work (Under Armour, Nike), help teach drone show design at UT Austin, handle
+          sales and business development for ADHOC Creative House, and build creative pipelines — 3D,
+          real-time, and AI tooling — that make production faster.
         </p>
         <p>
-          I'm not precious about style — dark and gritty or clean and commercial — and
-          I move fast. Off-screen, I play goalie for the Texas Longhorns hockey team:
-          same problem-solving instinct, just with a stick instead of a stylus.
+          Born in LA, shaped by Chicago, based in Austin. Off-screen: goalie for the Texas Longhorns
+          hockey team.
         </p>
         <div class="about-links">
-          <a href="JR-Resume-4.29.26.pdf" target="_blank">Resume <i class="uil uil-arrow-right"></i></a>
+          <a href="Jesse_Reinhard_Resume.pdf" target="_blank">Resume <i class="uil uil-arrow-right"></i></a>
           <a href="mailto:jessereinhard21@gmail.com">Contact <i class="uil uil-arrow-right"></i></a>
         </div>
-        <div class="about-photo">
-          <img loading="lazy" src="./assets/about/hockey.jpg" alt="Jesse playing goalie for the Texas Longhorns">
-        </div>
+        <p class="about-footnote">
+          <a href="Sketchbook.html">Sketchbook — personal art, stills, and older motion work</a>
+        </p>
       </div>
     </div>
   </section>
@@ -212,16 +164,6 @@
   <footer>
     <p>&copy; 2026 Jesse Reinhard</p>
   </footer>
-
-  <!-- LIGHTBOX -->
-  <div class="lightbox" id="lightbox">
-    <div class="lightbox-bg"></div>
-    <button class="lb-close"><i class="uil uil-times"></i></button>
-    <button class="lb-nav lb-prev"><i class="uil uil-angle-left-b"></i></button>
-    <img class="lb-img" src="" alt="">
-    <video class="lb-video" controls loop playsinline></video>
-    <button class="lb-nav lb-next"><i class="uil uil-angle-right-b"></i></button>
-  </div>
 
   <script src="./js/app.js"></script>
 </body>

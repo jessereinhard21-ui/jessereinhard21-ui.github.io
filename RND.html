@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>R&amp;D — Jesse Reinhard</title>
+  <meta name="description" content="Pipelines and tooling built to make live production faster — real-time AI visuals, procedural shaders, and generative concepting.">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+  <link rel="stylesheet" href="./css/project.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <nav class="project-nav">
+    <div class="project-nav-inner">
+      <a href="index.html" class="back-link"><i class="uil uil-angle-left-b"></i> Back</a>
+      <a href="index.html" class="logo">Jesse Reinhard</a>
+    </div>
+  </nav>
+
+  <main class="project">
+    <header class="project-header">
+      <div class="project-label">Pipeline &amp; Tooling</div>
+      <h1 class="project-title">R&amp;D</h1>
+    </header>
+
+    <div class="project-hero">
+      <video autoplay loop muted playsinline>
+        <source src="./assets/projects/osl-shaders/NeonSignGlowFinal.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="project-desc">
+      <p>
+        I build pipelines. Live production is a schedule problem as much as a creative one &mdash; the
+        idea has to survive contact with a review cycle, a load-in, and a broadcast clock. So when a
+        step in that chain is slow, I build the tool that removes it.
+      </p>
+      <p>
+        Four of those builds are below. Each one started because something took too long or could not
+        be shown to a client fast enough, and each one ended up changing what was possible to pitch.
+      </p>
+    </div>
+
+    <h2 class="shows-heading">The builds</h2>
+
+    <!-- ===== STREAMDIFFUSION ===== -->
+    <section class="case" id="rd-streamdiffusion">
+      <h3 class="case-title">TouchDesigner &times; StreamDiffusion <span class="case-where">Real-time AI visuals</span></h3>
+      <p class="case-body">
+        A real-time diffusion pipeline running inside TouchDesigner, with the model reacting live to
+        incoming audio, video, or sensor data instead of rendering offline. Hugging Face models are
+        pulled into the TouchDesigner network and blended with custom shaders and procedural elements.
+      </p>
+      <p class="case-body">
+        <strong>What it made possible:</strong> generated imagery that responds to a live performance
+        on stage rather than being pre-baked to a timeline &mdash; the difference between playing back
+        a video and running a visual instrument.
+      </p>
+      <div class="show-videos two">
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/streamdiffusion/MagicJump.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/streamdiffusion/MagicJump_v1.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== COMFYUI ===== -->
+    <section class="case" id="rd-comfyui">
+      <h3 class="case-title">ComfyUI &mdash; custom fashion LoRA <span class="case-where">Concepting at pitch speed</span></h3>
+      <p class="case-body">
+        A node-based Stable Diffusion workflow with a fashion LoRA I trained myself, plus ControlNet
+        passes, IP-Adapter style transfer, and upscaling chains. The series runs one consistent look
+        across Tokyo, Detroit, Mexico City, and Berlin.
+      </p>
+      <p class="case-body">
+        <strong>What it made faster:</strong> a look book that used to mean a shoot or a week of
+        renders now takes an afternoon &mdash; which means a client sees the idea while it is still an
+        idea, and the expensive production only starts on something already approved.
+      </p>
+      <div class="show-videos">
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/comfyui/brooklynJam.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+      <div class="project-grid gallery" style="margin-top:1.5rem">
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/Tokyo-Techno.jpg" alt="Tokyo Techno"></div>
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/fashion_tokyo_hair_wind_v3_00004_.jpg" alt="Tokyo Hair Wind"></div>
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/DetroitStyleFashion1.jpg" alt="Detroit Style"></div>
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/sanzo_fashion_detroit_street_v7_00002_.jpg" alt="Detroit Street"></div>
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/MexicoCity-03.jpg" alt="Mexico City"></div>
+        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/BerlinFashion.jpg" alt="Berlin Fashion"></div>
+      </div>
+      <div class="case-note"><a href="COMFYUI.html">See the full series <i class="uil uil-arrow-right"></i></a></div>
+    </section>
+
+    <!-- ===== OSL SHADERS ===== -->
+    <section class="case" id="rd-osl">
+      <h3 class="case-title">OSL shaders <span class="case-where">Procedural look development</span></h3>
+      <p class="case-body">
+        Custom Open Shading Language shaders that generate texture and atmosphere procedurally instead
+        of from painted maps &mdash; neon, glow, fog, and surface detail driven by parameters rather
+        than by files.
+      </p>
+      <p class="case-body">
+        <strong>What it made faster:</strong> a look becomes a set of dials. Changing the mood of a
+        scene is a slider move, not a re-texture, so the answer to "can we see it warmer?" is minutes
+        instead of a day.
+      </p>
+      <div class="project-grid">
+        <div class="project-media">
+          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit1.mp4" type="video/mp4"></video>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit2.mp4" type="video/mp4"></video>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit3.mp4" type="video/mp4"></video>
+        </div>
+        <div class="project-media">
+          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/WolfRender.mp4" type="video/mp4"></video>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== RUNWAY CONCEPT ===== -->
+    <section class="case" id="rd-runway">
+      <h3 class="case-title">Generative video <span class="case-where">Prototyping before production</span></h3>
+      <p class="case-body">
+        Concept films built with generative video tools, then graded and cut like real footage &mdash;
+        runway looks, brand moments, and editorial sequences that exist before anything is physically
+        produced.
+      </p>
+      <p class="case-body">
+        <strong>What it made possible:</strong> pitching a moving idea instead of a board. A client can
+        watch the thing rather than imagine it, and the decision to build it for real gets made on
+        something they have already seen move.
+      </p>
+      <div class="show-videos two">
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/runwayconcept/Runway2000.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/runwayconcept/Valentino.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-cta">
+      <a href="index.html#about" class="btn">
+        About &amp; contact <i class="uil uil-arrow-right"></i>
+      </a>
+    </div>
+  </main>
+
+  <footer class="project-footer">
+    <p>&copy; 2026 Jesse Reinhard</p>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>

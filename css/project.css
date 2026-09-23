@@ -380,3 +380,249 @@ img, video { display: block; max-width: 100%; }
     margin-bottom: 3.5rem;
   }
 }
+
+/* ===== CASE STUDIES (Shows / R&D) ===== */
+.case {
+  margin-bottom: 7rem;
+  scroll-margin-top: 90px;
+}
+
+.case:last-of-type { margin-bottom: 5rem; }
+
+.case-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.6rem;
+  color: var(--heading);
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+
+.case-where {
+  display: block;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+
+/* Role / Scale / Problem rows */
+.case-meta {
+  border-top: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+  max-width: 900px;
+}
+
+.case-meta > div {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.case-meta dt {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text);
+  padding-top: 0.15rem;
+}
+
+.case-meta dd {
+  color: var(--text-light);
+  font-size: 0.92rem;
+  line-height: 1.7;
+}
+
+.case-body {
+  max-width: 680px;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.85;
+  margin-bottom: 1.5rem;
+}
+
+.case-body strong {
+  color: var(--heading);
+  font-weight: 500;
+}
+
+.case-note {
+  font-size: 0.78rem;
+  color: var(--text);
+  letter-spacing: 1px;
+  padding: 0.9rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.case-note a {
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+.case-note a:hover { color: var(--accent); }
+
+/* Placeholder marker - fill these in before sending the link out */
+.tbd {
+  color: var(--accent);
+  font-weight: 500;
+  border-bottom: 1px dashed currentColor;
+}
+
+/* Inline video inside a show-video frame */
+.show-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== ALSO-DIRECTED LIST ===== */
+.also-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  margin-bottom: 4rem;
+}
+
+.also-list li {
+  display: grid;
+  grid-template-columns: 1.2fr 1.4fr auto;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.also-name {
+  color: var(--heading);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+.also-detail {
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+.also-links {
+  display: inline-flex;
+  gap: 1.25rem;
+  white-space: nowrap;
+}
+
+.also-links a {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  transition: color 0.3s;
+}
+
+.also-links a:hover { color: var(--accent); }
+
+/* ===== CAMPAIGN CONCEPT BLOCKS ===== */
+.concept-block {
+  margin-bottom: 2.5rem;
+}
+
+.concept-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.concept-block p {
+  color: var(--text-light);
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.concept-idea {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.35rem !important;
+  line-height: 1.5 !important;
+  color: var(--heading) !important;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--accent);
+}
+
+@media (max-width: 900px) {
+  .case-meta > div {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .also-list li {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .also-links { padding-top: 0.35rem; }
+}
+
+/* Year sub-heads in the full show list */
+.year-heading {
+  font-size: 0.72rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 2.5rem 0 0.75rem;
+}
+
+/* Featured case videos: compact grid instead of full-width players */
+.case .show-videos {
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  max-width: 900px;
+}
+.case .show-images {
+  max-width: 900px;
+}
+
+/* Storyboard panels */
+.board-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  margin-top: var(--gap);
+}
+.board-grid.three { grid-template-columns: repeat(3, 1fr); }
+.board-grid img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid #222;
+}
+@media (max-width: 700px) {
+  .board-grid, .board-grid.three { grid-template-columns: 1fr 1fr; }
+}
+
+/* Other shows: one column per year */
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  margin-bottom: 4rem;
+}
+.year-grid .year-heading { margin-top: 0; }
+.year-grid .year-col .year-heading ~ .year-heading { margin-top: 2.5rem; }
+.year-grid .also-list { margin-bottom: 0; }
+.year-grid .also-list li {
+  grid-template-columns: 1fr;
+  gap: 0.2rem;
+  padding: 0.75rem 0;
+}
+.year-grid .also-links { padding-top: 0.25rem; }
+@media (max-width: 900px) {
+  .year-grid { grid-template-columns: 1fr; }
+}

@@ -1,28 +1,36 @@
+/* This script is shared by the homepage and the subpages (Sketchbook, R&D),
+   so every lookup below tolerates elements that only exist on some pages. */
+
 /* ===== HEADER ===== */
 const header = document.querySelector("header");
-window.addEventListener("scroll", () => {
-  header.classList.toggle("scrolled", window.scrollY > 50);
-});
+if (header) {
+  window.addEventListener("scroll", () => {
+    header.classList.toggle("scrolled", window.scrollY > 50);
+  });
+}
 
 /* ===== MOBILE MENU ===== */
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-  document.body.classList.toggle("menu-open");
-  navLinks.classList.toggle("open");
-});
-
-document.querySelectorAll(".nav-link").forEach(link => {
-  link.addEventListener("click", () => {
-    document.body.classList.remove("menu-open");
-    navLinks.classList.remove("open");
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    document.body.classList.toggle("menu-open");
+    navLinks.classList.toggle("open");
   });
-});
+
+  document.querySelectorAll(".nav-link").forEach(link => {
+    link.addEventListener("click", () => {
+      document.body.classList.remove("menu-open");
+      navLinks.classList.remove("open");
+    });
+  });
+}
 
 /* ===== LAZY-LOAD TILE VIDEOS ===== */
-/* Loads source on first viewport entry, then plays/pauses based on visibility
-   so off-screen tiles stop streaming. */
+/* Loads source on first viewport entry. Silent tiles also play/pause with
+   visibility so off-screen tiles stop streaming; videos with their own
+   controls (R&D page) just load and wait for the viewer to press play. */
 const lazyVideoObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     const video = entry.target;
@@ -33,14 +41,15 @@ const lazyVideoObserver = new IntersectionObserver((entries) => {
         delete src.dataset.src;
         video.load();
       }
-      video.play().catch(() => {});
-    } else {
+      if (!video.controls) video.play().catch(() => {});
+    } else if (!video.controls) {
       video.pause();
     }
   });
 }, { rootMargin: "150px" });
 
-document.querySelectorAll(".work-item video").forEach(v => lazyVideoObserver.observe(v));
+document.querySelectorAll(".work-item video, .shows-feature video, .show-video video[preload='none']")
+  .forEach(v => lazyVideoObserver.observe(v));
 
 /* ===== WORK CATEGORY TABS ===== */
 document.querySelectorAll("button.work-tab").forEach(tab => {
@@ -116,6 +125,7 @@ const collections = {
 };
 
 const lightbox = document.getElementById("lightbox");
+if (lightbox) {
 const lbImg = lightbox.querySelector(".lb-img");
 const lbVideo = lightbox.querySelector(".lb-video");
 let currentImages = [];
@@ -178,6 +188,7 @@ document.addEventListener("keydown", e => {
   if (e.key === "ArrowLeft") lightbox.querySelector(".lb-prev").click();
   if (e.key === "ArrowRight") lightbox.querySelector(".lb-next").click();
 });
+}
 
 /* ===== FADE IN ON SCROLL ===== */
 const observer = new IntersectionObserver(entries => {

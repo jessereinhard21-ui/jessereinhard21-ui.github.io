@@ -601,3 +601,201 @@ footer {
 
   .about-links { flex-direction: column; gap: 1rem; }
 }
+
+/* ===== PRODUCER REFRAME ADDITIONS ===== */
+
+/* Hero subhead under the role line */
+.hero-sub {
+  margin-top: 0.6rem !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  font-size: 0.95rem !important;
+  color: var(--text-light) !important;
+}
+
+/* Work sections (replaces the old tab groups) */
+.work-section {
+  margin-bottom: 6rem;
+}
+
+.work-section:last-child {
+  margin-bottom: 0;
+}
+
+.work-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+
+.work-heading {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: var(--heading);
+  letter-spacing: 0.5px;
+}
+
+.work-head-link {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text);
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.work-head-link:hover { color: var(--accent); gap: 0.7rem; }
+
+.work-eyebrow {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+/* Shows feature panel on the homepage */
+.shows-feature {
+  display: block;
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  overflow: hidden;
+  transition: border-color 0.4s;
+}
+
+.shows-feature:hover { border-color: #333; }
+
+.shows-feature video,
+.shows-feature img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 21/9;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.shows-feature:hover video,
+.shows-feature:hover img { transform: scale(1.02); }
+
+.shows-feature-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  background: #0d0d0d;
+}
+
+.shows-feature-clients {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+}
+
+.shows-feature-clients span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+  letter-spacing: 0.5px;
+}
+
+.shows-feature-cta {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  white-space: nowrap;
+  transition: gap 0.3s;
+}
+
+.shows-feature:hover .shows-feature-cta { gap: 0.7rem; }
+
+/* Small link under the About links */
+.about-footnote {
+  margin-top: 2.5rem;
+  font-size: 0.8rem;
+}
+
+.about-footnote a {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.about-footnote a:hover { color: var(--heading); border-color: var(--accent); }
+
+/* ===== SUBPAGE (Sketchbook) ===== */
+.project-nav {
+  position: fixed; top: 0; left: 0; width: 100%;
+  z-index: 100;
+  background: rgba(10,10,10,0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+.project-nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 var(--side);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.project-nav .back-link {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s, gap 0.3s;
+}
+
+.project-nav .back-link:hover { color: var(--heading); gap: 0.8rem; }
+
+.project-nav .logo {
+  font-family: "Abril Fatface", cursive;
+  font-size: 1.05rem;
+  color: var(--heading);
+  letter-spacing: 0.5px;
+}
+
+body.subpage .work {
+  padding-top: 140px;
+}
+
+.sketchbook-header {
+  margin-bottom: 2.5rem;
+}
+
+.sketchbook-title {
+  font-family: "Abril Fatface", cursive;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  color: var(--heading);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 900px) {
+  .shows-feature video { aspect-ratio: 16/9; }
+  body.subpage .work { padding-top: 110px; }
+}
