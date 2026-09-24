@@ -704,3 +704,6 @@ img, video { display: block; max-width: 100%; }
 }
 .sound-btn:hover { border-color: var(--accent); color: var(--accent); }
 .sound-btn[hidden] { display: none; }
+
+/* OSL: featured neon video sits above the smaller clips */
+.project-hero.osl-feature { margin: 1.5rem 0 var(--gap); max-width: 900px; }
