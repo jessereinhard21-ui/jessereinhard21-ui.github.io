@@ -842,6 +842,7 @@ body.subpage .work {
 }
 .work-head-link.big:hover { color: #0a0a0a; background: var(--accent); }
 
-/* Homepage header video, dimmed so the name reads first */
-.hero-dim { background: #000; }
-.hero-dim video { opacity: 0.7; }
+/* Homepage header video: black drops out against the page (screen blend),
+   so only the lit figure shows; dimmed so the name reads first */
+.hero-dim { background: transparent; border-radius: 0; }
+.hero-dim video { opacity: 0.8; mix-blend-mode: screen; }
