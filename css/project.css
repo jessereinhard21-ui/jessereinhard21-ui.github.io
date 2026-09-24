@@ -674,3 +674,19 @@ img, video { display: block; max-width: 100%; }
 @media (max-width: 700px) {
   .brain-block { grid-template-columns: 1fr; }
 }
+
+/* Fashion LoRA: three hand-picked looks before "see the full series" */
+.lora-picks {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+  max-width: 900px;
+}
+.lora-picks img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}

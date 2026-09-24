@@ -37,41 +37,15 @@
         step in that chain is slow, I build the tool that removes it.
       </p>
       <p>
-        Four of those builds are below. Each one started because something took too long or could not
-        be shown to a client fast enough, and each one ended up changing what was possible to pitch.
+        Two of those builds are below, followed by other AI and video work. Each one started because
+        something took too long or could not be shown to a client fast enough, and each one ended up
+        changing what was possible to pitch.
         After them is an installation from the Texas Immersive Institute, where the build was the
         experience itself.
       </p>
     </div>
 
     <h2 class="shows-heading">The builds</h2>
-
-    <!-- ===== STREAMDIFFUSION ===== -->
-    <section class="case" id="rd-streamdiffusion">
-      <h3 class="case-title">TouchDesigner &times; StreamDiffusion <span class="case-where">Real-time AI visuals</span></h3>
-      <p class="case-body">
-        A real-time diffusion pipeline running inside TouchDesigner, with the model reacting live to
-        incoming audio, video, or sensor data instead of rendering offline. Hugging Face models are
-        pulled into the TouchDesigner network and blended with custom shaders and procedural elements.
-      </p>
-      <p class="case-body">
-        <strong>What it made possible:</strong> generated imagery that responds to a live performance
-        on stage rather than being pre-baked to a timeline &mdash; the difference between playing back
-        a video and running a visual instrument.
-      </p>
-      <div class="show-videos two">
-        <div class="show-video autoplay">
-          <video loop playsinline preload="none" controls>
-            <source data-src="./assets/projects/streamdiffusion/MagicJump.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="show-video autoplay">
-          <video loop playsinline preload="none" controls>
-            <source data-src="./assets/projects/streamdiffusion/MagicJump_v1.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </section>
 
     <!-- ===== COMFYUI ===== -->
     <section class="case" id="rd-comfyui">
@@ -93,13 +67,10 @@
           </video>
         </div>
       </div>
-      <div class="project-grid gallery" style="margin-top:1.5rem">
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/Tokyo-Techno.jpg" alt="Tokyo Techno"></div>
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/fashion_tokyo_hair_wind_v3_00004_.jpg" alt="Tokyo Hair Wind"></div>
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/DetroitStyleFashion1.jpg" alt="Detroit Style"></div>
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/sanzo_fashion_detroit_street_v7_00002_.jpg" alt="Detroit Street"></div>
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/MexicoCity-03.jpg" alt="Mexico City"></div>
-        <div class="project-media"><img loading="lazy" src="./assets/projects/comfyui/BerlinFashion.jpg" alt="Berlin Fashion"></div>
+      <div class="lora-picks">
+        <img loading="lazy" src="./assets/projects/comfyui/Tokyo-Techno.jpg" alt="Fashion LoRA — Tokyo Techno">
+        <img loading="lazy" src="./assets/projects/comfyui/Tokoto_F1.jpg" alt="Fashion LoRA — Tokyo street">
+        <img loading="lazy" src="./assets/projects/comfyui/fashion_tokyo_hair_wind_v3_00004_.jpg" alt="Fashion LoRA — Tokyo Hair Wind">
       </div>
       <div class="case-note"><a href="COMFYUI.html">See the full series <i class="uil uil-arrow-right"></i></a></div>
     </section>
@@ -133,20 +104,26 @@
       </div>
     </section>
 
-    <!-- ===== RUNWAY CONCEPT ===== -->
-    <section class="case" id="rd-runway">
-      <h3 class="case-title">Generative video <span class="case-where">Prototyping before production</span></h3>
+    <!-- ===== OTHER AI & VIDEO EDITS ===== -->
+    <section class="case" id="rd-other">
+      <h3 class="case-title">Other AI &amp; video edits <span class="case-where">TouchDesigner &times; StreamDiffusion &middot; generative video</span></h3>
       <p class="case-body">
-        Concept films built with generative video tools, then graded and cut like real footage &mdash;
-        runway looks, brand moments, and editorial sequences that exist before anything is physically
-        produced.
-      </p>
-      <p class="case-body">
-        <strong>What it made possible:</strong> pitching a moving idea instead of a board. A client can
-        watch the thing rather than imagine it, and the decision to build it for real gets made on
-        something they have already seen move.
+        A real-time diffusion pipeline inside TouchDesigner that reacts live to audio, video or sensor
+        input, so the visuals respond to a performance instead of playing back from a timeline. Alongside
+        it, concept films made with generative video tools and then graded and cut like real footage,
+        so a client can watch an idea move before anything is produced.
       </p>
       <div class="show-videos two">
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/streamdiffusion/MagicJump.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="show-video autoplay">
+          <video loop playsinline preload="none" controls>
+            <source data-src="./assets/projects/streamdiffusion/MagicJump_v1.mp4" type="video/mp4">
+          </video>
+        </div>
         <div class="show-video autoplay">
           <video loop playsinline preload="none" controls>
             <source data-src="./assets/projects/runwayconcept/Runway2000.mp4" type="video/mp4">
