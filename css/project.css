@@ -711,3 +711,44 @@ img, video { display: block; max-width: 100%; }
 /* Reserve video space from width/height attributes so anchors don't drift */
 .project-grid .project-media video,
 .project-hero video { height: auto; }
+
+/* Vox Temporis: photo grid + row of vertical videos */
+.vox-photos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: var(--gap);
+  max-width: 900px;
+}
+.vox-photos img {
+  width: 100%; height: auto;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+.vox-videos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  max-width: 900px;
+}
+.vox-videos figure { margin: 0; }
+.vox-videos video {
+  width: 100%; height: auto;
+  aspect-ratio: 9 / 16;
+  object-fit: cover;
+  border-radius: 6px;
+  background: #000;
+  display: block;
+}
+.vox-videos figcaption {
+  font-size: 0.78rem;
+  color: var(--text);
+  line-height: 1.5;
+  margin-top: 0.5rem;
+}
+@media (max-width: 700px) {
+  .vox-photos, .vox-videos { grid-template-columns: 1fr 1fr; }
+}
