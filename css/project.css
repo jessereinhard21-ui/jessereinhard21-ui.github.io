@@ -250,6 +250,12 @@ img, video { display: block; max-width: 100%; }
   border-top: 1px solid var(--border);
 }
 
+.shows-note {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  margin: -0.75rem 0 2rem;
+}
+
 .show-section {
   margin-bottom: 10rem;
   scroll-margin-top: 90px;
