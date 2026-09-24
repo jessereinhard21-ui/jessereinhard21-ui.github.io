@@ -842,7 +842,13 @@ body.subpage .work {
 }
 .work-head-link.big:hover { color: #0a0a0a; background: var(--accent); }
 
-/* Homepage header video: black drops out against the page (screen blend),
-   so only the lit figure shows; dimmed so the name reads first */
-.hero-dim { background: transparent; border-radius: 0; }
-.hero-dim video { opacity: 0.8; mix-blend-mode: screen; }
+/* Homepage header figure: animated WebP with a real transparent background */
+.hero-dim { background: none; border-radius: 0; overflow: visible; display: flex; justify-content: center; }
+.hero-dim img {
+  width: auto;
+  height: min(70vh, 600px);
+  aspect-ratio: auto;
+  object-fit: contain;
+  opacity: 0.85;
+}
+@media (max-width: 1024px) { .hero-dim img { height: 420px; } }
