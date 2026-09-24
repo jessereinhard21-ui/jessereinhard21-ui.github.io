@@ -606,23 +606,27 @@ img, video { display: block; max-width: 100%; }
   .board-grid, .board-grid.three { grid-template-columns: 1fr 1fr; }
 }
 
-/* Other shows: one column per year */
+/* Other shows: one list flowing across three balanced columns */
 .year-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem;
-  align-items: start;
+  column-count: 3;
+  column-gap: 2.5rem;
   margin-bottom: 4rem;
 }
-.year-grid .year-heading { margin-top: 0; }
-.year-grid .year-col .year-heading ~ .year-heading { margin-top: 2.5rem; }
+.year-grid .year-col { break-inside: auto; }
+.year-grid .year-heading {
+  margin: 0 0 0.75rem;
+  break-after: avoid;
+}
+.year-grid .year-col + .year-col .year-heading,
+.year-grid .year-col .also-list + .year-heading { margin-top: 2rem; }
 .year-grid .also-list { margin-bottom: 0; }
 .year-grid .also-list li {
   grid-template-columns: 1fr;
   gap: 0.2rem;
   padding: 0.75rem 0;
+  break-inside: avoid;
 }
 .year-grid .also-links { padding-top: 0.25rem; }
 @media (max-width: 900px) {
-  .year-grid { grid-template-columns: 1fr; }
+  .year-grid { column-count: 1; }
 }
