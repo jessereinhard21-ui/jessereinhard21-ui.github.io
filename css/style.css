@@ -841,3 +841,7 @@ body.subpage .work {
   border-radius: 999px;
 }
 .work-head-link.big:hover { color: #0a0a0a; background: var(--accent); }
+
+/* Homepage header video, dimmed so the name reads first */
+.hero-dim { background: #000; }
+.hero-dim video { opacity: 0.7; }
