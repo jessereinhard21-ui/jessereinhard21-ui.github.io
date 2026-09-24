@@ -707,3 +707,7 @@ img, video { display: block; max-width: 100%; }
 
 /* OSL: featured neon video sits above the smaller clips */
 .project-hero.osl-feature { margin: 1.5rem 0 var(--gap); max-width: 900px; }
+
+/* Reserve video space from width/height attributes so anchors don't drift */
+.project-grid .project-media video,
+.project-hero video { height: auto; }

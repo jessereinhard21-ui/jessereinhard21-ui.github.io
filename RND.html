@@ -83,23 +83,23 @@
         instead of a day.
       </p>
       <div class="project-hero hero-sound osl-feature">
-        <video id="rd-hero" autoplay loop muted playsinline controls>
+        <video width="1080" height="1080" id="rd-hero" autoplay loop muted playsinline controls>
           <source src="./assets/projects/osl-shaders/NeonSignGlowFinal.mp4" type="video/mp4">
         </video>
         <button type="button" class="sound-btn" id="rd-sound"><i class="uil uil-volume-up"></i> Sound on</button>
       </div>
       <div class="project-grid">
         <div class="project-media">
-          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit1.mp4" type="video/mp4"></video>
+          <video width="1280" height="720" autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit1.mp4" type="video/mp4"></video>
         </div>
         <div class="project-media">
-          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit2.mp4" type="video/mp4"></video>
+          <video width="1280" height="720" autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit2.mp4" type="video/mp4"></video>
         </div>
         <div class="project-media">
-          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit3.mp4" type="video/mp4"></video>
+          <video width="1280" height="720" autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/flamingoboat_Edit3.mp4" type="video/mp4"></video>
         </div>
         <div class="project-media">
-          <video autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/WolfRender.mp4" type="video/mp4"></video>
+          <video width="1280" height="1280" autoplay loop muted playsinline><source src="./assets/projects/osl-shaders/WolfRender.mp4" type="video/mp4"></video>
         </div>
       </div>
     </section>
@@ -197,6 +197,16 @@
       if (!v || !b) return;
       b.addEventListener("click", function () { v.muted = false; v.play(); b.hidden = true; });
       v.addEventListener("volumechange", function () { b.hidden = !v.muted; });
+    })();
+  </script>
+  <script>
+    // Media above a section can finish loading after the jump and push it down;
+    // re-align to the linked section once everything is in.
+    (function () {
+      var id = location.hash.slice(1), el = id && document.getElementById(id);
+      if (!el) return;
+      var go = function () { el.scrollIntoView({ block: "start" }); };
+      window.addEventListener("load", function () { go(); setTimeout(go, 400); });
     })();
   </script>
 </body>
