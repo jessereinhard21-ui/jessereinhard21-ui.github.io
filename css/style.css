@@ -830,3 +830,14 @@ body.subpage .work {
   border: 0;
   pointer-events: none;
 }
+
+/* Bigger "All shows" button in the homepage Shows header */
+.work-head-link.big {
+  font-size: 0.9rem;
+  letter-spacing: 2.5px;
+  color: var(--heading);
+  padding: 0.7rem 1.3rem;
+  border: 1px solid var(--accent);
+  border-radius: 999px;
+}
+.work-head-link.big:hover { color: #0a0a0a; background: var(--accent); }
