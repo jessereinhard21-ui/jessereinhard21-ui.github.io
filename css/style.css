@@ -778,6 +778,15 @@ footer {
   letter-spacing: 0.5px;
 }
 
+/* The homepage's bare nav{} rule would squash this bar; reset it here */
+nav.project-nav {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  height: auto;
+}
+
 body.subpage .work {
   padding-top: 140px;
 }
@@ -799,3 +808,8 @@ body.subpage .work {
   .shows-feature video { aspect-ratio: 16/9; }
   body.subpage .work { padding-top: 110px; }
 }
+
+/* Brand & Concept: three tiles in one row */
+.work-grid.three { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 1024px) { .work-grid.three { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .work-grid.three { grid-template-columns: 1fr; } }
