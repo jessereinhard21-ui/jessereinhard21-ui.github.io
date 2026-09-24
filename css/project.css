@@ -655,3 +655,22 @@ img, video { display: block; max-width: 100%; }
 @media (max-width: 900px) {
   .case.compact { grid-template-columns: 1fr; gap: 1.25rem; }
 }
+
+/* TXI brain: vertical phone video beside its notes */
+.brain-block {
+  display: grid;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+.brain-block video {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  background: #000;
+}
+.brain-block .brain-loop { max-width: 480px; aspect-ratio: 16 / 9; object-fit: cover; }
+@media (max-width: 700px) {
+  .brain-block { grid-template-columns: 1fr; }
+}

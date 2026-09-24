@@ -12,3 +12,6 @@ assets/drones/Notre-Dame/OMNI_Notre_Dame_2025_v1_2025-06-09_11-01-19.mp4
 
 # macOS junk
 .DS_Store
+
+# Local image picker (not part of the site)
+_picker/
